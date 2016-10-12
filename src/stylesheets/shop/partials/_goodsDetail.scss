@@ -1,0 +1,202 @@
+#goods-detail{
+  background-color: #f0f0f0;
+  .desc{
+    position: relative;
+    background-color: #ffffff;
+    .goods{
+      padding: 6px 10px;
+      .price{
+        zoom: 1;
+        width: 50%;
+        span{
+          float: left;
+        }
+        .now-price{
+          margin-right: 11px;
+          color: $color-theme-default;
+          font-size: 18px;
+        }
+        .before-price{
+          margin-right: 14px;
+          color: #a0a0a0;
+          font-size: 12px;
+          margin-top: 5px;
+        }
+        .discount{
+          background-color: #ed5736;
+          text-align: center;
+          color: #ffffff;
+          font-size: 12px;
+          vertical-align: top;
+          display: inline-block;
+          padding: 2px;
+          border-radius: 2px;
+        }
+        @include clearfix-modern
+      }
+      .title{
+        margin-top: 10px;
+        font-size: 15px;
+      }
+    }
+    .info{
+      zoom: 1;
+      margin-top: 5px;
+      font-size: 12px;
+      color: #565656;
+      span{
+        float: left;
+        margin-right: 14px;
+      }
+      @include clearfix-modern
+    }
+    .guarantee{
+      height: 30px;
+      border-top: 1px solid#dfdfdf;
+      zoom: 1;
+      box-sizing: border-box;
+      font-size: 12px;
+      padding: 6px 10px;
+      span{
+        float: left;
+        margin-right: 10px;
+      }
+      i{
+        height: 13px;
+        width: 13px;
+        background-size: 13px 13px;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-right: 2px;
+      }
+      .seven>i{
+        background-image:url('../images/seven_icon.png');
+      }
+      .quality>i{
+        background-image: url('../images/quality_icon.png');
+      }
+      @include clearfix-modern
+    }
+    .time{
+      position: absolute;
+      font-size: 13px;
+      top: 6px;
+      right: 15px;
+      .time-img{
+        background-image: url('../images/gif_countdown.gif');
+        width: 15px;
+        height: 15px;
+        background-size: 15px 15px;
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-right: 5px;
+      }
+      .time-info{
+        color:$color-theme-default
+      }
+    }
+  }
+  .type{
+    margin-top: 9px;
+    background-color: #ffffff;
+    >div{
+      border-bottom: 1px solid#dfdfdf;
+    }
+    .type-button{
+      padding: 11px 12px;
+      border-bottom: 1px solid#dfdfdf;
+      position: relative;
+      font-size: 16px;
+      color: #565656;
+      &.open{
+        b{
+          -webkit-transform: rotate(90deg);
+          -ms-transform: translateY(90deg);
+          transform: translateY(90deg);
+        }
+      }
+      .button-str{
+        display: inline-block;
+        color: #565656;
+        margin-left: 20px;
+      }
+      b{
+        display: inline-block;
+        background-image: url('../images/right_row.png');
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        float: right;
+      }
+    }
+    .price-config{
+      span{
+        display: inline-block;
+        height: 17px;
+        padding: 4px 5px;
+        border: 1px solid#565656;
+        border-radius: 5px;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 11px;
+      }
+      display: none;
+      >div{
+        display: inline-block;
+        >span{
+          margin-left: 22px;
+          margin-bottom: 0;
+          &:first-child{
+            margin-left: 24px;
+            position: relative;
+          }
+        }
+      }
+      .price-name{
+        padding: 11px 12px;
+        color: #565656;
+        font-size: 16px;
+      }
+      .items{
+        &.last{
+          margin: 0;
+        }
+        >span{
+          &:last-child{
+            margin-bottom: 11px;
+          }
+        }
+      }
+    }
+  }
+  .special-type{
+    margin-top: 9px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #000;
+    padding: 12px 10px;
+    .special-item{
+      margin-top: 9px;
+      span{
+        margin-left: 19px;
+        &:first-child{
+          color: #565656;
+          margin-left: 0;
+        }
+      }
+    }
+
+  }
+  .content{
+    margin-top: 9px;
+    background-color: #ffffff;
+    padding: 10px;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+}

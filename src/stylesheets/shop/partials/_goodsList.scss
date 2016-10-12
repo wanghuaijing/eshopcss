@@ -1,0 +1,103 @@
+#goods-list{
+  background-color: #f0f0f0;
+  ul{
+    padding: 0;
+    margin: 0;
+  }
+  $navigation-height :160px;
+  .navigation{
+    width: 100%;
+    height: $navigation-height;
+    margin-bottom: 12px;
+    background-color: $default-body-color;
+    text-align: center;
+    .navigation-li{
+      float: left;
+      width: 25%;
+      height: $navigation-height/2;
+      position: relative;
+    }
+    .navigation-img{
+      width: 45px;
+      height: 45px;
+      position: relative;
+      left: 50%;
+      margin-left: -23px;
+      margin-top: 7px;
+    }
+    .navigation-desc{
+      position: absolute;
+      width: 100%;
+      bottom: 7px;
+    }
+    $img: (1:'../images/shop_icon_hot-sale.png',
+    2:'../images/shop_icon_new-arrive.png',
+    3:'../images/shop_icon_on-sale.png',
+    4:'../images/shop_icon_ticket.png',
+    5:'../images/shop_icon_skin-care-products.png',
+    6:'../images/shop_icon_commodity.png',
+    7:'../images/shop_icon_mom&babay.png',
+    8:'../images/shop_icon_food.png');
+    @each $index,$url in $img{
+      .li-#{$index}{
+        .navigation-img{
+          background-image: url($url) ;
+        }
+      }
+    }
+
+    @include clearfix-modern;
+  }
+  .item{
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    border-bottom: 1px solid#dfdfdf;
+    .img{
+      position: relative;
+      .left-time{
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 4px 12px;
+        background-color: $color-theme-default;
+        color: #ffffff;
+        opacity: 0.7;
+        font-size: 12px;
+      }
+    }
+    .desc{
+      padding: 0 9px;
+      zoom: 1;
+      .t{
+        font-size: 18px;
+        float: left;
+        padding: 14px 0;
+        color: #565656;
+        .t-tuan{
+          font-size: 12px;
+        }
+      }
+      .p{
+        float: right;
+        padding: 7px 0;
+        span{
+          margin: 0 6px;
+        }
+        .max{
+          color: #a0a0a0;
+          font-size: 15px;
+          vertical-align: text-top;
+        }
+        .min{
+          color: $color-theme-default;
+          font-size: 25px;
+          vertical-align: baseline;
+          b{
+            font-size: 18px;
+          }
+        }
+      }
+      @include clearfix-modern
+    }
+  }
+}

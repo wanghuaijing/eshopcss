@@ -1,0 +1,18 @@
+@import "compass";
+
+$default-font-family:Microsoft Yahei, "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+
+$default-font-size:14px;
+
+$default-body-width:1200px;
+
+$default-body-background: #f0f0f0;
+@import "../modules/all";
+@import "errorLyout";
+@import "layout";
+@import "goodsList";
+@import "banner";
+@import "goodsDetail";
+
+
+

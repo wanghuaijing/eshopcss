@@ -78,7 +78,7 @@ gulp.task('vendorjs', function () {
 
 gulp.task('default', function () {
     browserSync.init({
-        server: "./",
+        server: "./build",
         port:3049,
         ui:{
             port:3050
@@ -93,7 +93,7 @@ gulp.task('watch', function () {
     gulp.watch('./src/sprites/*', ['sprites']);
     gulp.watch('./src/images/*', ['images']);
     gulp.watch(['./src/stylesheets/*', './src/stylesheets/*/*', './src/stylesheets/*/*/*'], ['sass']);
-    gulp.watch('./html/*.html').on('change', reload);
+    gulp.watch('./build/*.html').on('change', reload);
     gulp.watch('./src/javascripts/plugins/*/*.js', ['basejs']);
     gulp.watch('./src/javascripts/vendors/*.js', ['vendorjs']);
     gulp.watch('./src/javascripts/plugins/*/*.css', ['basecss']);

@@ -1,0 +1,23 @@
+//text-overflow-ellipsis
+@mixin text-overflow-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+//clearfix
+@mixin clearfix-modern {
+  &:after, &:before {
+    content: '';
+    clear: both;
+    display: table;
+  }
+  *zoom: 1;
+  *overflow: hidden;
+}
+//img
+@mixin img-style{
+  background-size: cover;
+  background-repeat: no-repeat ;
+  width: 100%;
+}
